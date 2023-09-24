@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: aqua;
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#movingImage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s;
+}

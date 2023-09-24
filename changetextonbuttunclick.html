@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toggle Text on Button Click</title>
+</head>
+<body>
+    <h1 id="heading">The most affordable learning platform</h1>
+    <button id="toggleButton">Toggle Text</button>
+
+    <script>
+        // Get references to the heading and button
+        const heading = document.getElementById("heading");
+        const toggleButton = document.getElementById("toggleButton");
+
+        // Create an array of text to toggle between
+        const textArray = ["The most affordable learning platform", "PW Skills"];
+        let currentIndex = 0;
+
+        // Function to toggle the text
+        function toggleText() {
+            currentIndex = (currentIndex + 1) % textArray.length;
+            heading.textContent = textArray[currentIndex];
+        }
+
+        // Add a click event listener to the button
+        toggleButton.addEventListener("click", toggleText);
+    </script>
+</body>
+</html>
